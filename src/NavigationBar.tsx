@@ -8,10 +8,11 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import { GitHub, LinkedIn } from "@mui/icons-material";
+import { Theme } from "@mui/material/styles";
 import "./NavigationBar.css";
 
 const NavigationBar = () => {
-  const theme = useTheme();
+  const theme = useTheme<Theme>(); // Explicitly typing the theme
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const linkVariants = {

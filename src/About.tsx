@@ -2,7 +2,6 @@ import {
   Box,
   Chip,
   Container,
-  Divider,
   Typography,
   useMediaQuery,
   useTheme,
