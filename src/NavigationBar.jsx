@@ -10,15 +10,15 @@ import { motion } from "framer-motion";
 import { GitHub, LinkedIn } from "@mui/icons-material";
 import "./NavigationBar.css";
 
-const NavigationBar: React.FC = () => {
-  const theme = useTheme(); // Removed explicit typing, as `useTheme` automatically infers the type from MUI's theme.
-  const isMobile: boolean = useMediaQuery(theme.breakpoints.down("sm"));
+const NavigationBar = () => {
+  const theme = useTheme(); // Use MUI's theme hook
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // Detect mobile screens
 
   const linkVariants = {
     hover: { scale: 1.1, color: "#f50057" },
   };
 
-  const openLink = (url: string) => {
+  const openLink = (url) => {
     window.open(url, "_blank");
   };
 
